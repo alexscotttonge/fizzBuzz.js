@@ -14,4 +14,10 @@ describe("fizzBuzz", function(){
   it("should return FizzBuzz when given fifteen", function() {
     expect(fizzBuzz(15)).toEqual("FizzBuzz");
   });
+
+  it("should return FizzBuzz when given multiple of three and five", function() {
+    for (i=1; i<=100; i++){
+      if (i%5 == 0 && i%3 == 0) expect(fizzBuzz(i)).toEqual("FizzBuzz");
+    }
+  });
 });
